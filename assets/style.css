@@ -1,15 +1,28 @@
 *{
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
 }
 
 /*COLORS*/
 .green{
-    background-color: #75C587;
+    background-color: #43a059;
 }
 
 .blue{
     background-color: #206675;
+}
+
+.yellow{
+    background-color: #FFC056;
+}
+
+.orange{
+    background-color: #FD7B47;
+}
+
+.green-color{
+    color: #43a059;
 }
 
 
@@ -23,24 +36,34 @@ body{
     align-items: center;
 }
 
+
+
 .container{
-    width: 431px;
-    height: 712px;
+    width: 1000px;
+    height: 900px;
     box-shadow: 1px 1px 7px rgba(0, 0, 0, .5);
     border-radius: 10px;
+    background-image: url("../img/img-bg.png");
+    background-size: cover;
+    
+}
+
+.pad-10{
+    padding: 10px;
 }
 
 .title{
-    color: #fff;
+    color: #FFC056;
     text-align: center;
     width: 80%;
     margin: 74px auto;
+    border-bottom: 1px solid #FFC056;
 }
 
 .title-h2{
     color: #fff;
     text-align: center;
-    width: 80%;
+    width: 20%;
     margin: 73px auto 33px;
 }
 
@@ -58,8 +81,10 @@ body{
 .input-style{
     display: block;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 20px;
+    border: none;
+    outline: none;
 }
 
 .hand{
@@ -69,10 +94,19 @@ body{
 .btn{
     border: none;
     outline: none;
-    color: #000;
+    color: #fff;
     font-weight: 600;
     padding: none;
     height: 40px;
+}
+
+.shadow{
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
+}
+
+.btn:hover{
+    background-color: #54b96c;
+    
 }
 
 .flex{
@@ -95,19 +129,40 @@ div.list{
     background-color: #CF5252;
 }
 
+.del-item:hover{
+    background-color: #cf3535;
+}
 .flex-space{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.large-font{
+    font-size: 33px;
+}
+
 .small-font{
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .container-products{
+    width: 100%;
     height: 200px;
     overflow: auto;
+}
+
+div.del-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.products{
+    width: 80%;
 }
 
 
