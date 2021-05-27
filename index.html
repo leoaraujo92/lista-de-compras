@@ -11,67 +11,87 @@
     <link rel="stylesheet" href="assets/style.css">
     <title>Lista de compras</title>
 </head>
-<body>
+<body onload="displayStatus()">
     
         <div class="container">
             <div class="title">
-                <h1 class="large-font">Lista de compras</h1>
+                <h1>Lista de compras</h1>
             </div>
             <div class="inputs center">
                 <form>
-                    <input class="input-style shadow small-font" type="text" id="product-name" placeholder="Nome do produto">
-                    <input class="input-style shadow small-font" type="number" id="product-price" placeholder="R$">
-                    <input class="input-style hand green btn shadow" type="button" value="Adicionar +">
+                    <input class="input-style shadow medium-font" type="text" id="product-name" placeholder="Nome do produto">
+                    <input class="input-style shadow medium-font" type="number" id="product-price" placeholder="R$0,00">
+                    <input class="input-style hand green btn shadow medium-font" id="btn" type="button" value="Adicionar +">
                 </form>
             </div>
             <div class="title-h2 orange">
                 <h2>Itens</h2>
             </div>
+            <!--PRODUTOS-->
             <div class="container-products">
                 <div class="products flex center">
                     <div class="list flex-space shadow">
-                        <div class="product">Arroz integral</div>
-                        <div class="price green-color">R$6,99</div>
+                        <div class="product medium-font">Arroz integral</div>
+                        <div class="price green-color medium-font">6.99</div>
                     </div>
                     <div class="del-item hand">X</div>
                 </div>
                 <div class="products flex center">
                     <div class="list flex-space shadow">
-                        <div class="product">Feijão</div>
-                        <div class="price green-color">R$7,99</div>
+                        <div class="product medium-font">Feijão</div>
+                        <div class="price green-color medium-font">9.99</div>
                     </div>
                     <div class="del-item hand">X</div>
                 </div>
                 <div class="products flex center">
                     <div class="list flex-space shadow">
-                        <div class="product">Peito de Frango s/ osso</div>
-                        <div class="price green-color">R$13,99</div>
+                        <div class="product medium-font">Pão integral</div>
+                        <div class="price green-color medium-font">5.30</div>
                     </div>
                     <div class="del-item hand">X</div>
                 </div>
                 <div class="products flex center">
                     <div class="list flex-space shadow">
-                        <div class="product">1kg batata inglesa</div>
-                        <div class="price green-color">R$3,99</div>
+                        <div class="product medium-font">Mamão Papaya 1kg</div>
+                        <div class="price green-color medium-font">4.39</div>
                     </div>
                     <div class="del-item hand">X</div>
                 </div>
                 <div class="products flex center">
                     <div class="list flex-space shadow">
-                        <div class="product">Atum ralado gomes da costa</div>
-                        <div class="price green-color">R$6,99</div>
+                        <div class="product medium-font">Bolacha nesfit integral</div>
+                        <div class="price green-color medium-font">2.30</div>
                     </div>
                     <div class="del-item hand">X</div>
                 </div>
                 <div class="products flex center">
                     <div class="list flex-space shadow">
-                        <div class="product">Pão integral seven boys</div>
-                        <div class="price green-color">R$5,30</div>
+                        <div class="product medium-font">Molho de tomate Heiz</div>
+                        <div class="price green-color medium-font">4.50</div>
                     </div>
                     <div class="del-item hand">X</div>
                 </div>
+                <div class="products flex center">
+                    <div class="list flex-space shadow">
+                        <div class="product medium-font">Maionese Helamans</div>
+                        <div class="price green-color medium-font">6.19</div>
+                    </div>
+                    <div class="del-item hand">X</div>
+                </div>
+                <div class="products flex center">
+                    <div class="list flex-space shadow">
+                        <div class="product medium-font">Macarrão Renata</div>
+                        <div class="price green-color medium-font">3.15</div>
+                    </div>
+                    <div class="del-item hand">X</div>
+                </div>
+            <!--DISPLAY-->
+            </div>
+            <div class="display-status center flex-space medium-font pad-20">
+                <div class="total-items">Total Itens 0</div>
+                <div class="amount-items">Valor Total: R$ 00,00</div>
             </div>
         </div>
-    
+    <script src="assets/script.js"></script>
 </body>
 </html>

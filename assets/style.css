@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: 'Patrick Hand', cursive;
-    font-size: 20px;
+    
 }
 
 /*COLORS*/
@@ -34,6 +34,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 }
 
 
@@ -41,15 +42,14 @@ body{
 .container{
     width: 1000px;
     height: 900px;
-    box-shadow: 1px 1px 7px rgba(0, 0, 0, .5);
+    box-shadow: 1px 1px 7px rgba(51, 51, 51, .5);
     border-radius: 10px;
-    background-image: url("../img/img-bg.png");
-    background-size: cover;
+    background-color: #333;
     
 }
 
-.pad-10{
-    padding: 10px;
+.pad-20{
+    padding: 20px;
 }
 
 .title{
@@ -142,6 +142,10 @@ div.list{
     font-size: 33px;
 }
 
+.medium-font{
+    font-size: 22px;
+}
+
 .small-font{
     font-size: 16px;
 }
@@ -165,7 +169,16 @@ div.del-item{
     width: 80%;
 }
 
+.display-status > div{
+    color: #FD7B47;
+}
 
+.total-items, .amount-items{
+    font-size: 28px;
+}
 
+.delete {
+    display: none;
+}
 
 
