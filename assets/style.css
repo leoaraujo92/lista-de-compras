@@ -109,9 +109,6 @@ body{
     
 }
 
-.flex{
-    display: flex;
-}
 
 div.list{
     width: 86%;
@@ -166,7 +163,9 @@ div.del-item{
 }
 
 .products{
+    display: flex;
     width: 80%;
+    margin: 0 auto;
 }
 
 .display-status > div{
