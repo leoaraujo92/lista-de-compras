@@ -2,8 +2,8 @@ const product = document.querySelector("#product-name")
 const price = document.querySelector("#product-price")
 const button = document.querySelector("#btn")
 const products = document.querySelector(".container-products")
-const productName = document.querySelectorAll(".product")
-const priceItems = document.querySelectorAll(".price")
+const productName = document.querySelector(".product")
+const priceItems = document.querySelector(".price")
 const totalItems = document.querySelector(".total-items")
 const sumTotalPrice = document.querySelector(".amount-items")
 const productsItems = [{
@@ -23,11 +23,16 @@ const productsItems = [{
     price: 13.99
 }]
 
+//productsItems.pop()
 
+function addItem(){
+    console.log(productName.value)
+    console.log(priceItems.value)
+}
 
 
 productsItems.forEach(items => {
-    console.log(items.name, items.price)
+
 
     let div = document.createElement('div')
     div.classList.add('products')
@@ -36,7 +41,7 @@ productsItems.forEach(items => {
         
         <div class="list flex-space shadow">
             <div class="product medium-font">${items.name}</div>
-            <div class="price green-color medium-font">${items.price}</div>
+            <div class="price green-color medium-font">R$${items.price}</div>
         </div>
         <div class="del-item hand">X</div>
         
@@ -71,6 +76,7 @@ button.addEventListener("click", function () {
 
     displayStatus()
     clearInputs()
+    addItem()
 })
 
 
