@@ -95,9 +95,23 @@ body{
     border: none;
     outline: none;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     padding: none;
     height: 40px;
+}
+
+.btn-remove{
+
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 500;
+    padding: none;
+    height: 40px;
+}
+
+.btn-remove:hover{
+    background-color: #cc592c;
 }
 
 .shadow{

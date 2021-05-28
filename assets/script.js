@@ -1,53 +1,48 @@
 const product = document.querySelector("#product-name")
 const price = document.querySelector("#product-price")
 const button = document.querySelector("#btn")
+const buttonRemoveAll = document.querySelector("#btn-remove")
 const products = document.querySelector(".container-products")
 const productName = document.querySelector(".product")
 const priceItems = document.querySelector(".price")
 const totalItems = document.querySelector(".total-items")
 const sumTotalPrice = document.querySelector(".amount-items")
-const productsItems = [{
-    name: "Arroz integral",
-    price: 6.99
-}, {
-    name: "Feijão broto legal",
-    price: 9.99
-}, {
-    name: "Miojo de carne",
-    price: 1.80
-},{
-    name: "Agua mineral",
-    price: 1.55
-},{
-    name: "Peito de frango s/ osso 1kg",
-    price: 13.99
-}]
+let productsItems = []
 
-//productsItems.pop()
+
 
 function addItem(){
-    console.log(productName.value)
-    console.log(priceItems.value)
+    let itemName = product.value
+    let itemPrice = price.value
+
+    console.log("Nome do produto: " + itemName + " Valor do Produto: " + itemPrice)
+    productsItems.push({name:`${itemName}`, price:`${itemPrice}`})
 }
 
 
-productsItems.forEach(items => {
+
+function updateItemsOnDisplay(){
+
+    products.innerHTML = ""
+
+    productsItems.forEach(items => {
 
 
-    let div = document.createElement('div')
-    div.classList.add('products')
+        let div = document.createElement('div')
+        div.classList.add('products')
 
-    div.innerHTML = `
-        
-        <div class="list flex-space shadow">
-            <div class="product medium-font">${items.name}</div>
-            <div class="price green-color medium-font">R$${items.price}</div>
-        </div>
-        <div class="del-item hand">X</div>
-        
-        `
-    products.append(div)
-})
+            div.innerHTML = `
+                
+                <div class="list flex-space shadow">
+                    <div class="product medium-font">${items.name}</div>
+                    <div class="price green-color medium-font">R$${items.price}</div>
+                </div>
+                <div class="del-item hand">X</div>
+                
+            `
+        products.append(div)
+    })
+}
 
 
 function clearInputs() {
@@ -57,26 +52,35 @@ function clearInputs() {
 
 
 
-function displayStatus() {
+function showTotalItemsAndPrice() {
 
     let totalPrice = 0
 
     productsItems.forEach(priceItem => {
 
-        totalPrice = totalPrice + priceItem.price
+        totalPrice = totalPrice + parseFloat(priceItem.price)
     })
 
     totalItems.innerHTML = `Total Itens ${productsItems.length}`
-    sumTotalPrice.innerHTML = `Valor Total R$ ${totalPrice.toFixed(2)} `
+    sumTotalPrice.innerHTML = `Valor Total R$ ${totalPrice} `
 }
 
 
 
 button.addEventListener("click", function () {
 
-    displayStatus()
-    clearInputs()
+    
     addItem()
+    clearInputs()
+    showTotalItemsAndPrice()
+    updateItemsOnDisplay()
+    
+    
 })
 
+buttonRemoveAll.addEventListener("click", function(){
+    productsItems = []
+    updateItemsOnDisplay()
+    showTotalItemsAndPrice()
+})
 
