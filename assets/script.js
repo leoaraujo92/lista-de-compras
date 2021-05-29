@@ -7,6 +7,7 @@ const productName = document.querySelector(".product")
 const priceItems = document.querySelector(".price")
 const totalItems = document.querySelector(".total-items")
 const sumTotalPrice = document.querySelector(".amount-items")
+const displayTotalItemsAndPrice = document.querySelector(".display-status")
 let productsItems = []
 
 
@@ -15,7 +16,6 @@ function addItem(){
     let itemName = product.value
     let itemPrice = price.value
 
-    console.log("Nome do produto: " + itemName + " Valor do Produto: " + itemPrice)
     productsItems.push({name:`${itemName}`, price:`${itemPrice}`})
 }
 
@@ -33,11 +33,11 @@ function updateItemsOnDisplay(){
 
             div.innerHTML = `
                 
-                <div class="list flex-space shadow">
+                <div class="list flex-space">
                     <div class="product medium-font">${items.name}</div>
                     <div class="price green-color medium-font">R$${items.price}</div>
                 </div>
-                <div class="del-item hand">X</div>
+                <div class="del-item hand" style="color: #cc3a00;">X</div>
                 
             `
         products.append(div)
@@ -61,19 +61,24 @@ function showTotalItemsAndPrice() {
         totalPrice = totalPrice + parseFloat(priceItem.price)
     })
 
-    totalItems.innerHTML = `Total Itens ${productsItems.length}`
-    sumTotalPrice.innerHTML = `Valor Total R$ ${totalPrice} `
+    totalItems.innerHTML = `Total Itens <span style="color: orange;">${productsItems.length}</span>`
+    sumTotalPrice.innerHTML = `Valor Total <span style="color: #43a059;">R$ ${totalPrice}</span> `
 }
 
 
 
 button.addEventListener("click", function () {
 
+    if(product.value === "" || price.value === ""){
+        alert("Digite o nome do produto e o valor!")
+    }else{
+        addItem()
+        clearInputs()
+        showTotalItemsAndPrice()
+        updateItemsOnDisplay()
+    }
     
-    addItem()
-    clearInputs()
-    showTotalItemsAndPrice()
-    updateItemsOnDisplay()
+   
     
     
 })
