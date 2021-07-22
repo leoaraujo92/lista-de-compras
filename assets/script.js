@@ -37,7 +37,6 @@ function updateItemsOnDisplay(){
                     <div class="product medium-font">${items.name}</div>
                     <div class="price green-color medium-font">R$${items.price}</div>
                 </div>
-                <div class="del-item hand" style="color: #cc3a00;">X</div>
                 
             `
         products.append(div)

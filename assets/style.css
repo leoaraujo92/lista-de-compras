@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Roboto', sans-serif;
     
 }
 
@@ -22,25 +22,24 @@ body{
 
 
 .container{
-    width: 100vw;
-    box-shadow: 1px 1px 7px rgba(51, 51, 51, .5);
+    width: 50vw;
+    margin: 0 auto;
     border-radius: 10px;
-    background-color: #333;
+    background-color: #fff
     
     
 }
 
 .title{
-    color: #FFC056;
+    color: #FFF;
     text-align: center;
-    width: 80%;
-    margin: 0px auto;
-    padding: 20px;
-    border-bottom: 1px solid #FFC056;
+    width: 100%;
+    padding: 15px;
+    background-color: midnightblue;
 }
 
 .title-h2{
-    color: #fff;
+    color: #000;
     text-align: center;
     padding: 10px, 0, 20px, 0;
 }
@@ -57,13 +56,9 @@ body{
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: transparent;
-    border: none;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-bottom: 2px solid #fff;
-    outline: none;
-    color: #fff;
+    color: #000;
 }
 
 
@@ -108,16 +103,15 @@ body{
 }
 
 div.list{
-    width: 86%;
+    width: 100%;
     height: 36px;
     padding: 8px;
     margin-bottom: 15px;
-    background-color: transparent;
-    border-bottom: 1px dashed #fff;
+    border-bottom: 1px solid black;
 }
 
 div.product{
-    color: #fff;
+    color: #000;
 }
 
 .del-item{
@@ -172,11 +166,18 @@ div.del-item{
 
 .display-status > div{
     padding: 5px;
-    color: #fff;
+    color: #000;
 }
 
-.total-items, .amount-items{
-    font-size: 28px;
+
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    padding: 15px;
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
 }
 
 

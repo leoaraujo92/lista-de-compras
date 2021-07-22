@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--GOOGLE FONTS-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="assets/style.css">
     <title>Lista de compras</title>
 </head>
 <body>
-    
+    <div class="title">
+        <h1>Lista de compras</h1>
+    </div>
         <div class="container">
-            <div class="title">
-                <h1>Lista de compras</h1>
-            </div>
             <div class="inputs center">
                 <form>
                     <input class="input-style medium-font" type="text" id="product-name" placeholder="Nome do produto">
                     <input class="input-style medium-font" type="number" id="product-price" placeholder="R$0.00">
-                    <input class="hand btn-add medium-font" id="btn" type="button" value="Adicionar +">
+                    <input class="hand btn-add medium-font" id="btn" type="button" value="Adicionar">
                     <input class="hand orange remove medium-font" id="btn-remove" type="button" value="Remover Todos">
                 </form>
             </div>
@@ -34,6 +34,10 @@
                 <div class="amount-items"></div>
             </div>
         </div>
+
+        <footer>
+            <p>Desenvolvido por Leonardo Araujo</p>
+        </footer>
     <script src="assets/script.js"></script>
 </body>
 </html>
